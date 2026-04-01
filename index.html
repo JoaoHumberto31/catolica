@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz de VALORANT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+
+    <div>
+        <h1>Quiz de VALORANT</h1>
+
+        <p><b>1. Qual é o mapa com 3 bombs?</b></p>
+        <input type="radio" name="q1"> Bind<br>
+        <input type="radio" name="q1"> Lotus<br>
+        <input type="radio" name="q1"> Split<br>
+        <input type="radio" name="q1"> Breeze<br>
+
+        <p><b>2. Qual é a função do controlador?</b></p>
+        <input type="radio" name="q2"> Controlar<br>
+        <input type="radio" name="q2"> Duelar<br>
+        <input type="radio" name="q2"> Lurkear<br>
+        <input type="radio" name="q2"> Smokar<br>
+
+        <p><b>3. Qual desse é um campeonato oficial?</b></p>
+        <input type="radio" name="q3"> BLAST open<br>
+        <input type="radio" name="q3"> LTA<br>
+        <input type="radio" name="q3"> VCT Americas<br>
+        <input type="radio" name="q3"> FNCS<br>
+
+        <button onclick="mostrarRespostas()">Verificar Respostas</button>
+
+        <div class="respostas" id="respostas">
+            <h2>Respostas Corretas:</h2>
+            <p>1. Lotus</p>
+            <p>2. Smokar</p>
+            <p>3. VCT Americas</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarRespostas() {
+            document.getElementById("respostas").style.display = "block";
+        }
+    </script>
+
 </body>
+
 </html>
