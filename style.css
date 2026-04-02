@@ -22,3 +22,11 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
+.correto {
+    color: green;
+}
+
+.errado {
+    color: red;
+}
