@@ -1,124 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz de VALORANT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div>
-        <h1>Quiz de VALORANT</h1>
-
-        <p><b>1. Qual é o mapa com 3 bombs?</b></p>
-        <label>
-            <input type="radio" name="q1" value="a"> Bind<br>
-        </label>
-        <label>
-            <input type="radio" name="q1" value="b"> Lotus<br>
-        </label>
-        <label>
-            <input type="radio" name="q1" value="c"> Split<br>
-        </label>
-        <label>
-            <input type="radio" name="q1" value="d"> Breeze<br>
-        </label>
-
-
-        <p><b>2. Qual é a função do controlador?</b></p>
-        <label>
-            <input type="radio" name="q2" value="a"> Controlar<br>
-        </label>
-        <label>
-            <input type="radio" name="q2" value="b"> Duelar<br>
-        </label>
-        <label>
-            <input type="radio" name="q2" value="c"> Lurkear<br>
-        </label>
-        <label>
-            <input type="radio" name="q2" value="d"> Smokar<br>
-        </label>
-
-
-        <p><b>3. Qual desse é um campeonato oficial?</b></p>
-        <label>
-            <input type="radio" name="q3" value="a"> BLAST open<br>
-        </label>
-        <label>
-            <input type="radio" name="q3" value="b"> LTA<br>
-        </label>
-        <label>
-            <input type="radio" name="q3" value="c"> VCT Americas<br>
-        </label>
-        <label>
-            <input type="radio" name="q3" value="d"> FNCS<br>
-        </label>
-
-
-
-
-        <button onclick="mostrarRespostas()">Verificar Respostas</button>
-
-        <div class="respostas" id="respostas">
-            
-        </div>
+    <main class="container">
+  <section class="card">
+    <img src="./assets/nosso-personagem.png" alt="Imagem do personagem">
+    <h1>Arkon, o Guerreiro</h1>
+    <p class="descricao">Um guerreiro lendário das montanhas do norte, conhecido por sua força e honra.</p>
+    <div class="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Força extrema</li>
+        <li>Resistência</li>
+        <li>Espada lendária</li>
+      </ul>
     </div>
-
-    <script>
-        function mostrarRespostas() {
-            let pontos = 0;
-
-            document.querySelectorAll("label").forEach(label => {
-                label.classList.remove("correto", "errado");
-            })
-
-            verificarQuestao("q1", "b");
-            verificarQuestao("q2", "d");
-            verificarQuestao("q3", "c");
-
-            if (document.querySelector('input[name="q1"]:checked')?.value === "b") {
-                pontos++;
-            }
-            if (document.querySelector('input[name="q2"]:checked')?.value === "d") {
-                pontos++;
-            }
-            if (document.querySelector('input[name="q3"]:checked')?.value === "c") {
-                pontos++;
-            }
-            let div = document.getElementById("respostas");
-
-            div.innerHTML = `
-            <h2>Respostas Corretas:</h2>
-            <p>1. Lotus</p>
-            <p>2. Smokar</p>
-            <p>3. VCT Americas</p>
-            <p><b>Você acertou: ${pontos}</b></p>;
-            `
-
-            div.style.display = "block";
-
-        }
-        function verificarQuestao(nome, correta) {
-            let opcoes = document.querySelectorAll(`input[name="${nome}"]`);
-            opcoes.forEach(opcao => {
-                let label = opcao.parentElement;
-                if (opcao.value === correta) {
-                    label.classList.add("correto");
-                }
-                if (opcao.checked && opcao.value !== correta) {
-                    label.classList.add("errado");
-                }
-                if (opcao.checked && opcao.value === correta) {
-                    label.classList.add("correto");
-                }
-
-            })
-        }
-
-    </script>
-
+    <div class="caracteristicas">
+      <h2>Características</h2>
+      <p><strong>Classe:</strong> Guerreiro</p>
+      <p><strong>Nível:</strong> 45</p>
+      <p><strong>Elemento:</strong> Terra</p>
+    </div>
+  </section>
+</main>
 </body>
-
 </html>
